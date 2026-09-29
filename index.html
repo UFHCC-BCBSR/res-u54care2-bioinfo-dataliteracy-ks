@@ -325,9 +325,9 @@
     <p class="subtitle">A Practical Guide to Start Your Bioinformatics Journey</p>
     <p style="font-size:0.7em; color:#aac8ff !important; margin-top:15px;">
       Kalyanee Shirlekar | Bioinformatics Analyst III<br>
-      Biostatistics and Computational Biology Shared Resources<br>
+      Bioinformatics, Statistical and Methodological Core<br>
       UFHCI<br>
-      09/28/2026
+      09/29/2026
     </p>
   </div>
 </section>
@@ -348,7 +348,7 @@
     <div>
       <div class="card-blue" style="margin-bottom:12px;">
         <h3>About Me</h3>
-        I am Kalyanee Shirlekar, a staff bioinformatician at the University of Florida Health Cancer Institute's Biostatistics and Computational Biology Shared Resources team. With over five years of experience in bioinformatics, I bring four or more years of expertise in the cancer diagnostics industry and an additional four or more years focused on cancer data science. My primary interests lie in evaluating novel analytical methods, advancing sequencing technologies, and applying these tools to deepen our understanding of cancer biology.
+        I am Kalyanee Shirlekar, a staff bioinformatician at the University of Florida Health Cancer Institute's Biostatistics and Computational Biology Shared Resources team. With more than five years of experience in bioinformatics. My primary interests lie in evaluating novel analytical methods, advanced sequencing technologies, and applying these tools to deepen our understanding of cancer biology.
       </div>
       <div class="card-blue">
         <h3>Our Team</h3>
@@ -366,11 +366,11 @@
 </section>
 
 <section>
-  <h2>What We Do at UFHCI — BCBSR</h2>
+  <h2>What We Do at Care2 -- BSMC</h2>
   <div class="three-col" style="margin-top:15px;">
     <div class="card">
       <h3>We Support</h3>
-      Researchers across the Cancer Institute, spanning diverse disciplines, departments, and colleges at the University of Florida.
+      Researchers across the 3 universities, Cancer Institutes, spanning diverse disciplines, departments, and colleges.
     </div>
     <div class="card">
       <h3>We Work With</h3>
@@ -399,7 +399,7 @@
     <div class="card-blue"><h3>Researchers</h3>Leading projects, supervising pipelines</div>
   </div>
   <div class="green-box" style="margin-top:15px; text-align:center;">
-    <strong>You do not need to be computational to benefit from good data practices</strong>
+    <strong>You do not need to be a bioinformatician to benefit from good data practices</strong>
   </div>
 </section>
 
@@ -409,7 +409,7 @@
 <section>
   <div class="section-title-slide">
     <h2>Why This Talk Matters</h2>
-    <p>The reproducibility crisis, shared responsibility, and the cost of bad practices</p>
+    <p>The reproducibility crisis is a shared responsibility</p>
   </div>
 </section>
 
@@ -424,9 +424,9 @@
       <div class="red-flag-box">
         <strong>Major culprits:</strong><br>
         Poor or missing documentation<br>
+        Unmaintained code<br>
         Lost or overwritten files<br>
         Undescribed methods and parameters<br>
-        Manual, unrepeatable steps
       </div>
     </div>
     <div>
@@ -499,8 +499,19 @@
         Wrong assay for the biological question
       </div>
     </div>
-    <div style="text-align:center; padding-top:20px;">
-      <div style="font-size:0.78em; color:var(--uf-orange); font-weight:700; margin-top:10px;">Time, money, and effort spent — with limited recourse</div>
+    <div style="text-align:center; font-size:0.72em; padding-top:10px;">
+      <div style="background:#fdecea; border-radius:8px; padding:15px; margin-bottom:10px;">
+        <strong>Month 1–3</strong><br>Collect samples<br>No analysis plan
+      </div>
+      <div style="font-size:1.2em; color:var(--uf-orange);">&#8595;</div>
+      <div style="background:#fdecea; border-radius:8px; padding:15px; margin-bottom:10px;">
+        <strong>Month 6</strong><br>Data arrives<br>Bioinformatician contacted
+      </div>
+      <div style="font-size:1.2em; color:var(--uf-orange);">&#8595;</div>
+      <div style="background:#fdecea; border-radius:8px; padding:15px;">
+        <strong>Month 7+</strong><br>Design flaws discovered<br>Too late to fix
+      </div>
+      <div style="font-size:1.08em; color:var(--uf-orange); font-weight:700; margin-top:12px;">Time, money, and effort spent — with limited recourse</div>
     </div>
   </div>
 </section>
@@ -577,11 +588,11 @@
     <div>
       <div class="card-blue" style="margin-bottom:12px;">
         <h3>What it is</h3>
-        Biological information stored, processed, and interpreted computationally — sequences, counts, intensities, coordinates, and clinical variables.
+        Biological information stored, processed, and interpreted computationally — DNA, RNA sequences, counts, intensities, coordinates, and clinical variables.
       </div>
       <div class="card-blue">
         <h3>The scale</h3>
-        A single RNA-seq experiment can generate <strong>billions of reads</strong>. Scale is not just a technical challenge — it shapes every analytical decision.
+        A single -omics experiment can generate <strong>billions of reads</strong>. Scale is not just a technical challenge — it shapes every analytical decision.
       </div>
     </div>
     <div style="font-size:0.72em;">
@@ -620,83 +631,66 @@
   </div>
 </section>
 
+<!-- FILE FORMAT SLIDES -->
 <section>
-  <h2>What to Be Aware of in a Bioinformatics Project</h2>
-  <div class="two-col">
-    <div>
-      <div class="warning-box" style="margin-bottom:8px;"><strong>Batch Effects</strong> — Samples processed on different days, machines, or by different people introduce technical variation that can mask or mimic biology</div>
-      <div class="warning-box" style="margin-bottom:8px;"><strong>Sample Size</strong> — Underpowered studies are one of the most common and unrecoverable problems in bioinformatics</div>
-      <div class="warning-box" style="margin-bottom:8px;"><strong>Metadata Quality</strong> — Missing or inconsistent sample metadata can make an entire dataset unanalyzable</div>
+  <h2>Common File Formats: Sequences &amp; Alignments</h2>
+  <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.3fr); gap:14px; align-items:center; margin-bottom:10px;">
+    <div class="card-blue" style="font-size:0.55em; padding:10px 14px;">
+      <h3 style="font-size:1.25em; margin:0 0 6px 0; color:var(--uf-blue);">FASTA <code>.fa</code> / <code>.fasta</code></h3>
+      Reference sequences: genomes, transcripts, proteins. A <code>&gt;</code> header line, then the sequence.
     </div>
-    <div>
-      <div class="warning-box" style="margin-bottom:8px;"><strong>Reference Genomes</strong> — Which genome build? hg38 vs hg19 matters. Never assume.</div>
-      <div class="warning-box" style="margin-bottom:8px;"><strong>Multiple Testing</strong> — Thousands of genes tested simultaneously — correction is not optional</div>
-      <div class="red-flag-box">
-        <strong>Key message:</strong> These are not analysis problems — they are <strong>design and communication problems</strong>
-      </div>
+    <pre style="margin:0; width:100%; box-sizing:border-box; font-size:0.42em; box-shadow:none;">&gt;chr17 Homo sapiens chromosome 17, GRCh38
+GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAG
+TTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTG</pre>
+  </div>
+  <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.3fr); gap:14px; align-items:center; margin-bottom:10px;">
+    <div class="card-blue" style="font-size:0.55em; padding:10px 14px;">
+      <h3 style="font-size:1.25em; margin:0 0 6px 0; color:var(--uf-blue);">FASTQ <code>.fastq.gz</code></h3>
+      Raw sequencing reads straight off the sequencer. Four lines per read: ID, sequence, <code>+</code>, per-base quality scores.
     </div>
+    <pre style="margin:0; width:100%; box-sizing:border-box; font-size:0.42em; box-shadow:none;">@SRR001666.1 read1/1                        <span style="color:#89b4fa;"># read ID</span>
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCC    <span style="color:#89b4fa;"># sequence</span>
++                                           <span style="color:#89b4fa;"># separator</span>
+!''*((((***+))%%%++)(%%%%).1***-+*''))**    <span style="color:#89b4fa;"># Phred quality, one per base</span></pre>
+  </div>
+  <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.3fr); gap:14px; align-items:center;">
+    <div class="card-blue" style="font-size:0.55em; padding:10px 14px;">
+      <h3 style="font-size:1.25em; margin:0 0 6px 0; color:var(--uf-blue);">SAM / BAM <code>.bam</code></h3>
+      Reads aligned to a reference genome. BAM is the compressed binary form; view it with <code>samtools view</code>. Needs a <code>.bai</code> index.
+    </div>
+    <pre style="margin:0; width:100%; box-sizing:border-box; font-size:0.42em; box-shadow:none;"><span style="color:#89b4fa;"># QNAME FLAG CHR   POS     MAPQ CIGAR MATE POS     TLEN SEQ      QUAL</span>
+read1   99   chr17 7674220 60   40M   =    7674380 200  GATTTG.. IIIIII..</pre>
   </div>
 </section>
 
 <section>
-  <h2>Asking the Right Questions to Your Collaborator</h2>
-  <div class="three-col">
-    <div>
-      <div class="card-blue" style="margin-bottom:10px;">
-        <h3>Before the Experiment</h3>
-        What is the biological question?<br>
-        What is the hypothesis?<br>
-        What effect size do you expect?
-      </div>
-      <div class="card-blue">
-        <h3>About the Samples</h3>
-        How were samples collected, stored, and processed?<br>
-        Are there any known confounders or batch effects?
-      </div>
+  <h2>Common File Formats: Variants &amp; Genomic Regions</h2>
+  <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.3fr); gap:14px; align-items:center; margin-bottom:10px;">
+    <div class="card-blue" style="font-size:0.55em; padding:10px 14px;">
+      <h3 style="font-size:1.25em; margin:0 0 6px 0; color:var(--uf-blue);">VCF <code>.vcf.gz</code></h3>
+      Variant calls: SNVs, indels. <code>##</code> lines hold metadata (including the genome build), then one row per variant with a genotype per sample.
     </div>
-    <div>
-      <div class="card-blue" style="margin-bottom:10px;">
-        <h3>About the Data</h3>
-        What assay was used and why?<br>
-        What is the expected sequencing depth?<br>
-        What file formats will be delivered?
-      </div>
-      <div class="card-blue">
-        <h3>About the Analysis</h3>
-        What tools are being used and why?<br>
-        What parameters were chosen?
-      </div>
-    </div>
-    <div>
-      <div class="card-blue" style="margin-bottom:10px;">
-        <h3>About the Output</h3>
-        What does a positive result look like?<br>
-        How will results be validated experimentally?
-      </div>
-      <div class="green-box">
-        A good question asked <strong>before</strong> the experiment saves weeks of analysis after it
-      </div>
-    </div>
+    <pre style="margin:0; width:100%; box-sizing:border-box; font-size:0.42em; box-shadow:none;">##fileformat=VCFv4.2
+##reference=GRCh38
+#CHROM POS     ID REF ALT QUAL FILTER INFO          FORMAT SAMPLE1
+chr17  7675088 .  C   T   812  PASS   DP=64;AF=0.48 GT:DP  0/1:64</pre>
   </div>
-</section>
-
-<section>
-  <h2>Questions to Ask When You Receive Results</h2>
-  <div class="two-col">
-    <div>
-      <div class="numbered-item"><span class="number-circle">1</span><div><strong>QC:</strong> Were any samples or features removed? Why?</div></div>
-      <div class="numbered-item"><span class="number-circle">2</span><div><strong>Statistics:</strong> What multiple testing correction was applied? Are effect sizes shown alongside p-values?</div></div>
-      <div class="numbered-item"><span class="number-circle">3</span><div><strong>Parameters:</strong> What thresholds were used? Are results sensitive to those choices?</div></div>
-      <div class="numbered-item"><span class="number-circle">4</span><div><strong>Reproducibility:</strong> Can this be re-run exactly? Is there a script?</div></div>
-      <div class="numbered-item"><span class="number-circle">5</span><div><strong>Biology:</strong> Do the results make biological sense? What is the next experiment?</div></div>
+  <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.3fr); gap:14px; align-items:center; margin-bottom:10px;">
+    <div class="card-blue" style="font-size:0.55em; padding:10px 14px;">
+      <h3 style="font-size:1.25em; margin:0 0 6px 0; color:var(--uf-blue);">BED <code>.bed</code></h3>
+      Genomic regions: genes, peaks, target panels. Tab-separated: chromosome, start, end, then optional name, score, strand.
     </div>
-    <div style="padding-top:20px;">
-      <div class="quote-box" style="font-size:0.72em;">
-        Receiving results is not the end of the conversation — <strong>it is the middle of it</strong>
-      </div>
-      <div class="red-flag-box" style="margin-top:10px; font-size:0.7em;">
-        If your analyst cannot answer questions 1–4, that is a reproducibility warning sign
-      </div>
+    <pre style="margin:0; width:100%; box-sizing:border-box; font-size:0.42em; box-shadow:none;"><span style="color:#89b4fa;"># chrom  start     end       name   score  strand</span>
+chr17    7668401   7687550   TP53   0      -
+chr7     55019016  55211628  EGFR   0      +
+chr1     1000000   1000500   peak_1 850    .</pre>
+  </div>
+  <div class="two-col">
+    <div class="warning-box" style="font-size:0.68em;">
+      <strong>Coordinates differ:</strong> BED is <strong>0-based</strong>, while VCF and SAM/BAM are <strong>1-based</strong>. Mixing them silently shifts every position by one.
+    </div>
+    <div class="red-flag-box" style="font-size:0.68em;">
+      <strong>Always check the genome build:</strong> hg19 and hg38 coordinates for the same gene are different. Files from different builds cannot be combined directly.
     </div>
   </div>
 </section>
@@ -758,6 +752,86 @@
   </div>
 </section>
 
+<section>
+  <h2>What to Be Aware of in a Bioinformatics Project</h2>
+  <div class="two-col">
+    <div>
+      <div class="warning-box" style="margin-bottom:8px;"><strong>Batch Effects</strong> — Samples processed on different days, machines, or by different people introduce technical variation that can mask or mimic biology</div>
+      <div class="warning-box" style="margin-bottom:8px;"><strong>Sample Size</strong> — Underpowered studies are one of the most common and unrecoverable problems in bioinformatics</div>
+      <div class="warning-box" style="margin-bottom:8px;"><strong>Metadata Quality</strong> — Missing or inconsistent sample metadata can make an entire dataset unanalyzable</div>
+    </div>
+    <div>
+      <div class="warning-box" style="margin-bottom:8px;"><strong>Reference Genomes</strong> — Which genome build? hg38 vs hg19 matters. Never assume.</div>
+      <div class="warning-box" style="margin-bottom:8px;"><strong>Multiple Testing</strong> — Thousands of genes tested simultaneously — correction is not optional</div>
+      <div class="red-flag-box">
+        <strong>Key message:</strong> These are not analysis problems — they are <strong>design and communication problems</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Asking the Right Questions to Your Collaborator</h2>
+  <div class="three-col">
+    <div>
+      <div class="card-blue" style="margin-bottom:10px;">
+        <h3>Before the Experiment</h3>
+        What is the biological question?<br>
+        What effect size do you expect?
+      </div>
+      <div class="card-blue">
+        <h3>About the Samples</h3>
+        How were samples collected, stored, and processed?<br>
+        Are there any known confounders or batch effects?
+      </div>
+    </div>
+    <div>
+      <div class="card-blue" style="margin-bottom:10px;">
+        <h3>About the Data</h3>
+        Which assay to use?<br>
+        What is the expected sequencing depth?<br>
+        What file formats will be delivered?
+      </div>
+      <div class="card-blue">
+        <h3>About the Analysis</h3>
+        What tools are being used and why?<br>
+        What parameters were chosen?
+      </div>
+    </div>
+    <div>
+      <div class="card-blue" style="margin-bottom:10px;">
+        <h3>About the Output</h3>
+        What does a positive result look like?<br>
+        How will results be validated experimentally?
+      </div>
+      <div class="green-box">
+        A good question asked <strong>before</strong> the experiment saves weeks of analysis after it
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Questions to Ask When You Receive Results</h2>
+  <div class="two-col">
+    <div>
+      <div class="numbered-item"><span class="number-circle">1</span><div><strong>QC:</strong> Were any samples or features removed? Why?</div></div>
+      <div class="numbered-item"><span class="number-circle">2</span><div><strong>Statistics:</strong> What multiple testing correction was applied? Are effect sizes shown alongside p-values?</div></div>
+      <div class="numbered-item"><span class="number-circle">3</span><div><strong>Parameters:</strong> What thresholds were used? Are results sensitive to those choices?</div></div>
+      <div class="numbered-item"><span class="number-circle">4</span><div><strong>Reproducibility:</strong> Can this be re-run exactly? Is there a script?</div></div>
+      <div class="numbered-item"><span class="number-circle">5</span><div><strong>Biology:</strong> Do the results make biological sense? What is the next experiment?</div></div>
+    </div>
+    <div style="padding-top:20px;">
+      <div class="quote-box" style="font-size:0.72em;">
+        Receiving results is not the end of the conversation — <strong>it is the middle of it</strong>
+      </div>
+      <div class="red-flag-box" style="margin-top:10px; font-size:0.7em;">
+        If your analyst cannot answer questions 1–4, that is a reproducibility warning sign
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INTERACTIVE PLOTS -->
 <section>
   <h2>How to Read Bioinformatics Outputs</h2>
@@ -792,9 +866,6 @@
       <div class="paper-title">"A Quick Guide to Organizing Computational Biology Projects"</div>
       <div style="font-size:0.85em; color:#444; margin-bottom:10px;">William Stafford Noble — University of Washington</div>
       <hr style="border:1px solid #eee; margin:8px 0;">
-      <div style="font-size:0.82em; color:#555;">
-        A five-page practical guide that has become a standard reference for computational biologists. It argues that the two most important things a researcher can do are: write for someone who has never seen the project, and assume everything will need to be done again.
-      </div>
       <div class="paper-rule" style="margin-top:12px;">
         Rule 1: "Someone unfamiliar with your project should be able to look at your computer files and understand in detail what you did and why."
       </div>
@@ -1132,64 +1203,6 @@ Rscript src/summarize.R
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- SECTION 10: ERROR HANDLING -->
-<!-- ============================================================ -->
-<section>
-  <h2>Handling Errors Without Panic</h2>
-  <div class="three-col" style="margin-top:15px;">
-    <div class="card">
-      <h3>1. Detect</h3>
-      Write robust code that checks for bad inputs, missing files, and unexpected values. Use library functions for standard formats.
-    </div>
-    <div class="card">
-      <h3>2. Abort</h3>
-      When an error occurs — stop. Print a clear message. Exit with a non-zero status. If you skip over errors and continue, you may never notice them.
-    </div>
-    <div class="card">
-      <h3>3. Use Temp Files</h3>
-      Write to <code>results_tmp.csv</code>, rename to <code>results.csv</code> only when complete. Prevents partial outputs from being mistaken for final results.
-    </div>
-  </div>
-  <div class="warning-box" style="margin-top:20px; font-size:0.72em;">
-    A half-written output file that <em>looks</em> complete is one of the sneakiest bugs in bioinformatics — this rule prevents it.
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- SECTION 11: GOOD DATA SCIENCE PRACTICES -->
-<!-- ============================================================ -->
-<section>
-  <div class="section-title-slide">
-    <h2>Good Data Science Practices</h2>
-    <p>Storage, security, documentation, and reproducibility</p>
-  </div>
-</section>
-
-<section>
-  <h2>Data Storage &amp; Security</h2>
-  <div class="two-col">
-    <div>
-      <div class="numbered-item"><span class="number-circle">1</span><div>Store data on <strong>approved institutional platforms</strong> — HiPerGator, UF's licensed Dropbox, or department shared drives</div></div>
-      <div class="numbered-item"><span class="number-circle">2</span><div>Clinical and patient data: follow <strong>HIPAA guidelines</strong> at all times</div></div>
-      <div class="numbered-item"><span class="number-circle">3</span><div>Set permissions on raw FASTQ files to <strong>read-only</strong> (<code>chmod 444</code>) — never overwrite your originals</div></div>
-      <div class="numbered-item"><span class="number-circle">4</span><div>Use clearly named, organized directories from <strong>day one</strong></div></div>
-    </div>
-    <div>
-      <div class="card-blue" style="margin-bottom:12px;">
-        <h3>UF Resources</h3>
-        <strong>HiPerGator</strong> — UF's high-performance computing cluster for large datasets<br><br>
-        <strong>UFRC Training</strong> — Free workshops on HiPerGator, Git, Python, Bash. Sign up at <a href="https://docs.rc.ufl.edu/training/additional_training/" target="_blank">docs.rc.ufl.edu/training</a><br><br>
-        <strong>Data Management &amp; Security Courses</strong> — Available through the myUFL Self-Service training portal
-      </div>
-      <div class="red-flag-box" style="font-size:0.72em;">
-        <strong>Never store identifiable patient data on:</strong><br>
-        Personal laptops, personal cloud drives, USB drives, or unencrypted email
-      </div>
-    </div>
-  </div>
-</section>
-
 <section>
   <h2>The README File: A Gift to Your Future Self</h2>
   <div class="two-col">
@@ -1252,93 +1265,6 @@ Rscript src/summarize.R
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- SECTION 12: MAKING THE MOST OF RESULTS -->
-<!-- ============================================================ -->
-<section>
-  <div class="section-title-slide">
-    <h2>Making the Most of Your Results</h2>
-    <p>Productive conversations, the right questions, and red flags to watch for</p>
-  </div>
-</section>
-
-<section>
-  <h2>How to Have a Productive Conversation With Your Analyst</h2>
-  <div class="two-col">
-    <div>
-      <div class="green-box" style="margin-bottom:10px;">Come with a <strong>clear biological question</strong>, not just a dataset</div>
-      <div class="green-box" style="margin-bottom:10px;">Share all relevant <strong>metadata upfront</strong> — do not assume your analyst knows the experiment</div>
-      <div class="green-box" style="margin-bottom:10px;">Ask about <strong>assumptions, limitations</strong>, and what the analysis <em>cannot</em> tell you</div>
-      <div class="green-box">Treat it as a <strong>dialogue</strong>, not a service request</div>
-    </div>
-    <div style="padding-top:20px;">
-      <div style="font-size:1.1em; font-weight:700; color:var(--uf-blue); text-align:center; margin-bottom:15px;">Collaboration, not transaction</div>
-      <div class="card-blue" style="font-size:0.75em;">
-        <h3>BCBSR Core Services</h3>
-        Visit <a href="https://care2healthcenter.org/bioinformatics-statistical-methodological-core/" target="_blank">care2healthcenter.org — BSMC</a> to view our full range of services and connect with team leaders from partner institutions including UF, FAMU, and USC.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Red Flags in Bioinformatics Results</h2>
-  <div class="two-col">
-    <div>
-      <div class="red-flag-box" style="margin-bottom:8px;">p-values reported <strong>without effect sizes</strong></div>
-      <div class="red-flag-box" style="margin-bottom:8px;">No mention of <strong>quality control steps</strong></div>
-      <div class="red-flag-box" style="margin-bottom:8px;">Results that seem <strong>too clean</strong> — biology is messy</div>
-      <div class="red-flag-box" style="margin-bottom:8px;">Figures with <strong>no axis labels</strong> or sample sizes</div>
-      <div class="red-flag-box">Analysis done in <strong>Excel on the raw data file</strong></div>
-    </div>
-    <div style="padding-top:10px;">
-      <div class="warning-box" style="font-size:0.72em;">
-        These are not signs of a bad analyst — they are signs of a communication gap. Ask the questions early, not after submission.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- SECTION 13: RESOURCES -->
-<!-- ============================================================ -->
-<section>
-  <div class="section-title-slide">
-    <h2>Resources &amp; Working With Us</h2>
-    <p>How to engage, what to bring, and where to get help</p>
-  </div>
-</section>
-
-<section>
-  <h2>How to Engage With Our Team</h2>
-  <div class="two-col">
-    <div>
-      <div class="card-blue" style="margin-bottom:12px;">
-        <h3>What we offer</h3>
-        Consultations, grant analysis plans, collaborative analysis, training sessions, and manuscript support
-      </div>
-      <div class="card-blue">
-        <h3>Bring to a first meeting</h3>
-        Your biological question<br>
-        Description of your data and study design<br>
-        Any deadlines (grants, publications)<br>
-        Your metadata structure
-      </div>
-    </div>
-    <div>
-      <div class="card" style="margin-bottom:12px;">
-        <h3>Contact Us</h3>
-        <strong>Request Services:</strong> <a href="https://care2healthcenter.org/bioinformatics-statistical-methodological-core/" target="_blank">care2healthcenter.org — BSMC</a><br><br>
-        <strong>Walk-in Clinic:</strong> <a href="https://cancer.ufl.edu/research/shared-resources/biostatistics-computational-biology-shared-resource/events/bb-winc/" target="_blank">BB-WInC</a> — Tuesdays, 12–1 PM<br><br>
-        <strong>Email:</strong> <a href="mailto:kshirlekar@ufl.edu">kshirlekar@ufl.edu</a>
-      </div>
-      <div class="green-box" style="font-size:0.72em;">
-        The earlier you reach out, the more we can help
-      </div>
-    </div>
-  </div>
-</section>
-
 <section>
   <h2>Useful Resources</h2>
   <div class="two-col">
@@ -1375,7 +1301,9 @@ Rscript src/summarize.R
     <p class="subtitle">Questions &amp; Discussion</p>
     <p style="font-size:0.75em; color:#aac8ff !important; margin-top:15px;">
       Kalyanee Shirlekar | kshirlekar@ufl.edu<br>
-      Biostatistics and Computational Biology Shared Resources | UFHCI
+      Bioinformatics, Statistical and Methodological Core (BSMC)<br>
+      CaRE2 Health Center<br>
+      UFHCI
     </p>
   </div>
 </section>
@@ -1386,7 +1314,7 @@ Rscript src/summarize.R
 <!-- FOOTER -->
 <div class="footer-bar">
   <span>Data Literacy &amp; Good Practices for Bioinformatics | UFHCI | Biostatistics and Computational Biology Shared Resources</span>
-  <span>Kalyanee Shirlekar | 09/28/2026</span>
+  <span>Kalyanee Shirlekar | 09/29/2026</span>
 </div>
 
 <script>
